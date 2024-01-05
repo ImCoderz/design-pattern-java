@@ -6,7 +6,7 @@ This repository illustrates the Prototype Pattern, a design pattern that creates
 
 ## UML Diagram
 
-![Prototype Pattern UML Diagram](https://github.com/ImCoderz/test/blob/main/PrototypeUML.png)
+![Prototype Pattern UML Diagram](https://github.com/ImCoderz/design-pattern-java/blob/main/assets/PrototypeUML.png)
 
 ## Description
 

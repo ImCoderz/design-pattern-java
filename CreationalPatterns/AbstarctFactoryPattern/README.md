@@ -6,7 +6,7 @@ This repository illustrates the Abstract Factory Pattern, a design pattern that 
 
 ## UML Diagram
 
-![Abstract Factory Pattern UML Diagram](https://github.com/ImCoderz/test/blob/main/AbstractFactoryUML.png)
+![Abstract Factory Pattern UML Diagram](https://github.com/ImCoderz/design-pattern-java/blob/main/assets/AbstractFactoryUML.png)
 
 ## Description
 

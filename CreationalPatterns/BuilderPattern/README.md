@@ -6,7 +6,7 @@ This repository illustrates the Builder Pattern, a design pattern that separates
 
 ## UML Diagram
 
-![Builder Pattern UML Diagram](https://github.com/ImCoderz/test/blob/main/BuilderUML.png)
+![Builder Pattern UML Diagram](https://github.com/ImCoderz/design-pattern-java/blob/main/assets/BuilderUML.png)
 
 ## Description
 

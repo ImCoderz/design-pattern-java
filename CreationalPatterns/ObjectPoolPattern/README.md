@@ -6,7 +6,7 @@ This repository illustrates the Object Pool Pattern, a design pattern that enhan
 
 ## UML Diagram
 
-![Object Pool Pattern UML Diagram](https://github.com/ImCoderz/test/blob/main/ObjectPoolUML.png)
+![Object Pool Pattern UML Diagram](https://github.com/ImCoderz/design-pattern-java/blob/main/assets/ObjectPoolUML.png)
 
 ## Description
 

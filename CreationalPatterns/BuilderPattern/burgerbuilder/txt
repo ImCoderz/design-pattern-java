@@ -1,0 +1,74 @@
+package com.naama;
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextInputDialog;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+import java.util.Optional;
+
+import com.naama.Model.BurgerBuilder;
+import com.naama.Model.CustomBurgerBuilder;
+
+
+public class BurgerBuilderUI extends Application {
+
+    private BurgerBuilder burgerBuilder = new MyBurgerBuilder();
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+        primaryStage.setTitle("Burger Builder");
+
+        // Create buttons for each component
+        Button bunButton = createButton("Add Bun");
+        Button pattyButton = createButton("Add Patty");
+        Button cheeseButton = createButton("Add Cheese");
+        Button vegetablesButton = createButton("Add Vegetables");
+        Button sauceButton = createButton("Add Sauce");
+
+        // Add event handlers to the buttons
+        bunButton.setOnAction(e -> addComponent("Bun", burgerBuilder::addBun));
+        pattyButton.setOnAction(e -> addComponent("Patty", burgerBuilder::addPatty));
+        cheeseButton.setOnAction(e -> addComponent("Cheese", burgerBuilder::addCheese));
+        vegetablesButton.setOnAction(e -> addComponent("Vegetables", burgerBuilder::addVegetables));
+        sauceButton.setOnAction(e -> addComponent("Sauce", burgerBuilder::addSauce));
+
+        // Create a layout
+        VBox layout = new VBox(10);
+        layout.setPadding(new Insets(10));
+        layout.getChildren().addAll(bunButton, pattyButton, cheeseButton, vegetablesButton, sauceButton);
+
+        // Create a scene
+        Scene scene = new Scene(layout, 300, 200);
+        primaryStage.setScene(scene);
+
+        // Show the stage
+        primaryStage.show();
+    }
+
+    private Button createButton(String text) {
+        Button button = new Button(text);
+        button.setMinWidth(150);
+        return button;
+    }
+
+    private void addComponent(String componentName, ComponentAdder componentAdder) {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Add Component");
+        dialog.setHeaderText("Enter type for " + componentName);
+        dialog.setContentText("Type:");
+
+        Optional<String> result = dialog.showAndWait();
+        result.ifPresent(type -> componentAdder.addComponent(type));
+    }
+
+    private interface ComponentAdder {
+        void addComponent(String type);
+    }
+}

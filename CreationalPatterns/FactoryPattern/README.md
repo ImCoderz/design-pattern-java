@@ -6,7 +6,7 @@ This repository illustrates the Factory Pattern, a design pattern that provides 
 
 ## UML Diagram
 
-![Factory Pattern UML Diagram](https://github.com/ImCoderz/design-pattern-java/blob/main/assets/FactoryUML.png)
+![Factory Pattern UML Diagram](https://github.com/ImCoderz/design-pattern-java/blob/main/assets/FactoryUML.jpg)
 
 ## Description
 
